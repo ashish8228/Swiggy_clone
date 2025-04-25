@@ -2,7 +2,7 @@ import { Link } from "react-router"
 
  export default function Restrocard({data}){
     return(
-        <Link to={"/city/delhi/"+data?.cards?.card?.info?.id}>
+        <Link to={"/city/delhi/"+data?.info?.id}>
         <div className="max-w-[280px] mb-2 transform transition duration-200 hover:scale-95 ">
             <img className="h-45 w-70 object-cover rounded-xl" src={"https://media-assets.swiggy.com/swiggy/image/upload/"+data.info.cloudinaryImageId}/>
             <div className="max-w-[95%] mx-auto mt-3">
