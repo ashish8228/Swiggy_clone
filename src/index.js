@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import Home from "./component/Home";
 import Restaurantmenu from "./component/Restaurantmenu";
 import SearchFood from "./component/SearchFood";
+import SecondaryHome from "./component/SecondaryHome";
 
 
 function App(){
@@ -13,9 +14,11 @@ function App(){
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element = {<Home></Home>}></Route>
-                    <Route path="/restaurant" element = {<Restaurant></Restaurant>}></Route>
-                    <Route path="/city/delhi/:id" element={<Restaurantmenu></Restaurantmenu>}></Route>
-                    <Route path="/city/delhi/:id/search" element={<SearchFood></SearchFood>}></Route>
+                    <Route element={<SecondaryHome></SecondaryHome>}>
+                        <Route path="/restaurant" element = {<Restaurant></Restaurant>}></Route>
+                        <Route path="/city/delhi/:id" element={<Restaurantmenu></Restaurantmenu>}></Route>
+                        <Route path="/city/delhi/:id/search" element={<SearchFood></SearchFood>}></Route>
+                    </Route>
                 </Routes>
             </BrowserRouter>
 
